@@ -1,0 +1,39 @@
+html {
+    box-sizing: border-box; 
+
+    margin: 0px 16px;
+}
+  
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Georgia, serif;"
+}
+
+body {
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+.disclaimer {
+    background-color: rgb(255, 175, 175);
+}
+
+.image {
+    background-color: lightgrey;
+    display: inline;
+}
+
+.home {
+    font-size: 24px;
+    text-align: center;
+}
+
+.home a {
+    display: block;
+}
