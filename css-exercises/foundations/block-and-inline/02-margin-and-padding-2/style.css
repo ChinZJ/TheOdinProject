@@ -1,0 +1,55 @@
+body {
+  background: #eee;
+  font-family: sans-serif;
+}
+
+.card {
+  width: 400px;
+  background: #fff;
+  margin: 16px auto;
+
+  /* 8px between the edge of the card and its content. */
+  padding: 8px; 
+}
+
+.title {
+  background: #e3f4ff;
+
+  /* Title of the card uses a 16px font. */
+  font-size: 16px;
+  /* 8px gap between each of the blue sections inside the card. */
+  margin-bottom: 8px;
+  padding: 8px;
+}
+
+.content {
+  background: #e3f4ff;
+
+  /* 8px gap between each of the blue sections inside the card. */
+  margin-bottom: 8px;
+  /* 16px space on the top and bottom, and 8px on either side. */
+  padding: 16px 8px;
+}
+
+.button-container {
+  background: #e3f4ff;
+
+  /* Everything inside the .button-container section is centered. */
+  text-align: center;
+  /* Everything inside the .button-container has 8px padding. */
+  padding: 8px;
+}
+
+button {
+  background: white;
+  border: 1px solid #eee;
+
+  /* Big Button is on its own line. */
+  display: block;
+  /* Big Button is centered. */
+  margin: 0px auto;
+  /* Big Button has 24px space on the sides, and 8px on top and bottom. */
+  padding: 8px 24px;
+  
+  
+}
