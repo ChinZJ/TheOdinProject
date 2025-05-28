@@ -12,6 +12,13 @@ body {
   background: white;
   border-bottom: 1px solid #ddd;
   box-shadow: 0 0 8px rgba(0,0,0,.1);
+
+  padding: 8px;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
 }
 
 .profile-image {
@@ -45,4 +52,12 @@ a {
 
 ul {
   list-style-type: none;
+
+  /* ul has innate padding and margin. */
+  padding: 0px;
+  margin: 0px;
+  margin-right: auto;
+
+  display: flex;
+  gap: 16px;
 }
