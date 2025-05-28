@@ -1,0 +1,185 @@
+html {
+    box-sizing: border-box;
+}
+  
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.header,
+.contact,
+.footer {
+    background-color: #1F2937;
+    color: #F9FAF8;
+}
+
+.top-subheader,
+.bottom-subheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 128px;
+}
+
+.bottom-subheader {
+    gap: 24px;
+}
+
+.header-logo {
+    font-size: 24px;
+}
+
+ul {
+    list-style-type: none;
+
+    padding: 0px;
+    margin: 0px;
+
+    display: flex;
+    gap: 16px;
+}
+
+.right-side {
+    background-color: rgb(109, 116, 125);
+
+    align-self: stretch;
+    text-align: center;
+}
+
+.left-side,
+.right-side {
+    flex: 1 1 0;
+}
+
+.header-title {
+    font-size: 48px;
+    font-weight: 900;
+}
+
+.header-description {
+    margin-bottom: 16px;
+}
+
+.blue {
+    background-color: #3882F6;
+}
+
+button {
+    text-decoration: none;
+    color: #F9FAF8;
+
+    border: none;
+    border-radius: 8px;
+    padding: 6px 16px;
+}
+
+.body {
+    flex: 1 1 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.illustrations {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    margin: 32px 0px;
+}
+
+.information-header {
+    color: #1F2937;
+    font-size: 36px;
+    font-weight: 900;
+
+    margin-bottom: 32px;
+}
+
+.image-description-set {
+    display: flex;
+    justify-content: center;
+
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.image-description-pair {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 150px;
+}
+
+.blue-border {
+    width: 150px;
+    height: 150px;
+
+    border: 3px solid #3882F6;
+    border-radius: 8px;
+}
+
+.illustration-text {
+    color: rgb(81, 90, 104);
+    text-align: center;
+}
+
+.text {
+    color: #F9FAF8;
+}
+
+.quotes {
+    background-color: #E5E7EB;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 32px 128px;
+}
+
+.quote-text {
+    font-size: 36px;
+    color: #1F2937;
+}
+
+.quote-author {
+    align-self: flex-end;
+}
+
+.contact {
+    margin: 64px 128px;
+    padding: 32px 64px;
+    border-radius: 6px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-button {
+    background-color: #3882F6;
+    border: 2px solid #F9FAF8;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 24px 0px;
+}
