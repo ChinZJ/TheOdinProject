@@ -129,13 +129,19 @@ button {
     border-radius: 8px;
 }
 
-.text {
+.illustration-text {
     color: rgb(81, 90, 104);
     text-align: center;
+}
+
+.text {
+    color: #F9FAF8;
 }
 
 .footer {
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
+
+    padding: 24px 0px;
 }
