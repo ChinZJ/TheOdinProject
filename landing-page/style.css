@@ -10,6 +10,8 @@ html {
 
 body {
     font-family: Roboto, sans-serif;
+    margin: 0;
+    min-height: 100vh;
 
     display: flex;
     flex-direction: column;
@@ -47,7 +49,7 @@ ul {
     gap: 16px;
 }
 
-img {
+.right-side {
     background-color: rgb(109, 116, 125);
 
     align-self: stretch;
@@ -80,7 +82,57 @@ button {
     border-radius: 8px;
     padding: 6px 16px;
 }
-  
+
+.body {
+    flex: 1 1 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.illustrations {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.information-header {
+    color: #1F2937;
+    font-size: 36px;
+    font-weight: 900;
+    
+    padding: 16px 0px;
+}
+
+.image-description-set {
+    display: flex;
+    justify-content: center;
+
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.image-description-pair {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 150px;
+}
+
+.blue-border {
+    width: 150px;
+    height: 150px;
+
+    border: 3px solid #3882F6;
+    border-radius: 8px;
+}
+
+.text {
+    color: rgb(81, 90, 104);
+    text-align: center;
+}
 
 .footer {
     display: flex;
