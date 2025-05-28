@@ -18,6 +18,7 @@ body {
 }
 
 .header,
+.contact,
 .footer {
     background-color: #1F2937;
     color: #F9FAF8;
@@ -159,6 +160,20 @@ button {
 
 .quote-author {
     align-self: flex-end;
+}
+
+.contact {
+    margin: 64px 128px;
+    padding: 32px 64px;
+    border-radius: 6px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-button {
+    background-color: #3882F6;
+    border: 2px solid #F9FAF8;
 }
 
 .footer {
