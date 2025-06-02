@@ -10,4 +10,14 @@ function getComputerChoice() {
     return choiceConverter[getRandomInt(choiceLength)];
 }
 
-console.log(getComputerChoice());
+// console.log(getComputerChoice());
+
+// Assume that the user will always enter a valid choice.
+// Always converts to lowercase.
+function getHumanChoice() {
+    let answer = prompt("rock, paper, or scissors?");
+    return answer.toLowerCase();
+}
+
+let answer = getHumanChoice();
+console.log(answer);
