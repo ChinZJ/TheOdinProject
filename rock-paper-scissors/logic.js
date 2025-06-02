@@ -1,6 +1,9 @@
 const choiceConverter = ["rock", "paper", "scissors"];
 const choiceLength = choiceConverter.length;
 
+let humanScore = 0;
+let computerScore = 0;
+
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
