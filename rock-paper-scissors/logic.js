@@ -18,9 +18,27 @@ function getComputerChoice() {
 // Assume that the user will always enter a valid choice.
 // Always converts to lowercase.
 function getHumanChoice() {
-    let answer = prompt("rock, paper, or scissors?");
-    return answer.toLowerCase();
+    return prompt("rock, paper, or scissors?").trim().toLowerCase();
 }
 
-let answer = getHumanChoice();
-console.log(answer);
+// let answer = getHumanChoice();
+// console.log(answer);
+
+function playRound(humanChoice, computerChoice) {
+    if (humanChoice === computerChoice) {
+        console.log("Tie!");
+    } else if ((humanChoice === "rock" && computerChoice === "scissors") ||
+            (humanChoice === "paper" && computerChoice === "rock") ||
+            (humanChoice === "scissors" && computerChoice === "paper")) {
+        console.log(`You win! ${humanChoice} beats ${computerChoice}`);
+        humanScore++;
+    } else {
+        console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
+        computerScore++;
+    }
+}
+
+// const humanSelection = getHumanChoice();
+// const computerSelection = getComputerChoice();
+
+// playRound(humanSelection, computerSelection);
