@@ -1,6 +1,16 @@
 const choiceConverter = ["rock", "paper", "scissors"];
 const choiceLength = choiceConverter.length;
 
+// Create a div for displaying results and append console logs
+const resultDiv = document.createElement("div");
+const resultPara = document.createElement("p");
+const gameResultPara = document.createElement("p");
+resultDiv.appendChild(resultPara);
+resultDiv.appendChild(gameResultPara);
+
+const body = document.querySelector("body");
+body.appendChild(resultDiv);
+
 let humanScore = 0;
 let computerScore = 0;
 
@@ -13,43 +23,32 @@ function getComputerChoice() {
     return choiceConverter[getRandomInt(choiceLength)];
 }
 
-// console.log(getComputerChoice());
-
-// Assume that the user will always enter a valid choice.
-// Always converts to lowercase.
-function getHumanChoice() {
-    return prompt("rock, paper, or scissors?").trim().toLowerCase();
-}
-
-// let answer = getHumanChoice();
-// console.log(answer);
-
 function playRound(humanChoice, computerChoice) {
     if (humanChoice === computerChoice) {
-        console.log("Tie!");
+        resultPara.textContent = "Tie!";
     } else if ((humanChoice === "rock" && computerChoice === "scissors") ||
             (humanChoice === "paper" && computerChoice === "rock") ||
             (humanChoice === "scissors" && computerChoice === "paper")) {
-        console.log(`You win! ${humanChoice} beats ${computerChoice}`);
         humanScore++;
+        resultPara.textContent = `You win! ${humanChoice} beats ${computerChoice}`;
     } else {
-        console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
         computerScore++;
+        resultPara.textContent = `You lose! ${computerChoice} beats ${humanChoice}`;
+    }
+
+    checkGameEnd();
+}
+
+function checkGameEnd() {
+    if ((humanScore >= 5) || (computerScore >= 5)) {
+        gameResultPara.textContent = `Results: ${humanScore} - ${computerScore}`
     }
 }
 
-// const humanSelection = getHumanChoice();
-// const computerSelection = getComputerChoice();
-
-// playRound(humanSelection, computerSelection);
-
-function playGame(rounds = 5) {
-    while (rounds-- > 0) {
-        let humanSelection = getHumanChoice();
-        let computerSelection = getComputerChoice();
-        playRound(humanSelection, computerSelection);
-    }
+// Add an event listener with the correct call
+let buttons = document.querySelectorAll("button");
+for (let button of buttons) {
+    button.addEventListener("click", () => {
+        playRound(button.textContent.toLowerCase(), getComputerChoice());
+    });
 }
-
-playGame();
-console.log(`Results: ${humanScore} - ${computerScore}`);
